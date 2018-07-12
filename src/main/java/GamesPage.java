@@ -6,22 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class GamesPage {
-    WebDriver driver;
+public class GamesPage extends AmazonPage{
+
 
     public GamesPage(  WebDriver driver )
     {
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
-        head= new Header(driver);
-    }
-
-    @FindBy(id="navbar")
-    Header head;
-
-    public Header getHeader()
-    {
-        return head;
+        super(driver);
     }
 
     @FindBy(id="mainResults")

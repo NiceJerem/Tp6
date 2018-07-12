@@ -4,22 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ItemPage {
-    WebDriver driver;
+public class ItemPage extends AmazonPage {
+
 
     public ItemPage(  WebDriver driver )
     {
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
-        head= new Header(driver);
-    }
-
-    @FindBy(id="navbar")
-    Header head;
-
-    public Header getHeader()
-    {
-        return head;
+        super(driver);
     }
 
     @FindBy(id="add-to-cart-button")

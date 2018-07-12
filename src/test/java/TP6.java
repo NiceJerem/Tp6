@@ -1,3 +1,5 @@
+import old.HomePage;
+import old.RegistrationPage;
 import org.hamcrest.core.Is;
 import org.junit.After;
 import org.junit.Assert;

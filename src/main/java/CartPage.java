@@ -9,23 +9,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class CartPage {
-    WebDriver driver;
+public class CartPage extends AmazonPage{
 
     public CartPage(  WebDriver driver )
     {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver,this);
-        head= new Header(driver);
+
     }
 
-    @FindBy(id="navbar")
-    Header head;
-
-    public Header getHeader()
-    {
-        return head;
-    }
 
     @FindBy(xpath="//*[@id=\"activeCartViewForm\"]/div[2]")
     WebElement cartList;

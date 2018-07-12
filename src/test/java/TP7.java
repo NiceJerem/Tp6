@@ -90,7 +90,7 @@ public class TP7 {
 
     }
     @Test
-    public void t2() {
+    public void t2_good() {
         AmazonHomePage home = new AmazonHomePage(driver);
         ConsolePage consolePage = home.getHeader().openVideoGames("Nintendo Switch");
         GamesPage gamesPage = consolePage.openGamesCategory();

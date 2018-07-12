@@ -4,23 +4,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ConsolePage {
+public class ConsolePage extends AmazonPage {
 
-    WebDriver driver;
 
     public ConsolePage(  WebDriver driver )
     {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver,this);
-        head= new Header(driver);
-    }
 
-    @FindBy(id="navbar")
-    Header head;
-
-    public Header getHeader()
-    {
-        return head;
     }
 
     @FindBy(linkText="Jeux")

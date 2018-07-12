@@ -7,26 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AmazonHomePage {
+public class AmazonHomePage  extends AmazonPage{
 
-    WebDriver driver;
 
     public AmazonHomePage(  WebDriver driver )
     {
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
-        head= new Header(driver);
+        super(driver);
     }
-
-    @FindBy(id="navbar")
-    Header head;
-
-    public Header getHeader()
-    {
-        return head;
-    }
-
-
 
     public void openBooks(String textLink)
     {
