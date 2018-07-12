@@ -89,6 +89,7 @@ public class TP7 {
         System.out.println("OK");
 
     }
+    
     @Test
     public void t2_good() {
         AmazonHomePage home = new AmazonHomePage(driver);
